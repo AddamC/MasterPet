@@ -85,13 +85,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Camadas\MODELO\Animais.cs" />
+    <Content Include="App_Code\Camadas\MODELO\Animais_Tratamento.cs" />
     <Compile Include="PaginasDaWeb\Animais.aspx.cs">
       <DependentUpon>Animais.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\Camadas\DAL\Cidades.cs" />
-    <Compile Include="App_Code\Camadas\MODEL\Cidades.cs" />
-    <Compile Include="App_Code\Camadas\MODEL\Clientes.cs" />
+    <Compile Include="App_Code\Camadas\MODELO\Cidades.cs" />
+    <Compile Include="App_Code\Camadas\MODELO\Clientes.cs" />
     <Compile Include="PaginasDaWeb\Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
