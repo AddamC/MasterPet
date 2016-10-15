@@ -66,10 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Animais.aspx" />
-    <Content Include="Cidade.aspx" />
-    <Content Include="Cliente.aspx" />
-    <Content Include="Home.aspx" />
+    <Content Include="PaginasDaWeb\Animais.aspx" />
+    <Content Include="PaginasDaWeb\Cidade.aspx" />
+    <Content Include="PaginasDaWeb\Cliente.aspx" />
+    <Content Include="PaginasDaWeb\Home.aspx" />
     <Content Include="logo.jpg" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.master" />
@@ -81,23 +81,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Tratamento.aspx" />
+    <Content Include="PaginasDaWeb\Tratamento.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animais.aspx.cs">
+    <Compile Include="PaginasDaWeb\Animais.aspx.cs">
       <DependentUpon>Animais.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cidade.aspx.cs">
+    <Compile Include="App_Code\Camadas\DAL\Cidades.cs" />
+    <Compile Include="App_Code\Camadas\MODEL\Cidades.cs" />
+    <Compile Include="App_Code\Camadas\MODEL\Clientes.cs" />
+    <Compile Include="PaginasDaWeb\Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente.aspx.cs">
+    <Compile Include="PaginasDaWeb\Cliente.aspx.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.cs">
+    <Compile Include="PaginasDaWeb\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -106,13 +109,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tratamento.aspx.cs">
+    <Compile Include="PaginasDaWeb\Tratamento.aspx.cs">
       <DependentUpon>Tratamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Camadas\" />
+    <Folder Include="App_Code\Camadas\BLL\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
