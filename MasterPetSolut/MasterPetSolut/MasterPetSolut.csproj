@@ -93,7 +93,7 @@
     <Content Include="App_Code\Camadas\MODEL\Animais.cs" />
     <Content Include="App_Code\Camadas\MODEL\Tratamentos.cs" />
     <Content Include="App_Code\Camadas\MODEL\Cidades.cs" />
-    <Content Include="App_Code\Camadas\MODEL\Tipo_Tratamento.cs" />
+    <Content Include="App_Code\Camadas\MODEL\Tipo_Tratamentos.cs" />
     <Content Include="App_Code\Camadas\MODEL\Animais_Tratamento.cs" />
     <Content Include="App_Code\Camadas\DAL\Conexao.cs" />
     <Content Include="App_Code\Camadas\DAL\Cidades.cs" />
@@ -101,6 +101,10 @@
     <Content Include="App_Code\Camadas\DAL\Tratamentos.cs" />
     <Content Include="App_Code\Camadas\DAL\Tipo_Tratamentos.cs" />
     <Content Include="App_Code\Camadas\DAL\Animais_Tratamento.cs" />
+    <Content Include="App_Code\Camadas\BLL\Animais.cs" />
+    <Content Include="App_Code\Camadas\BLL\Cidades.cs" />
+    <Content Include="App_Code\Camadas\BLL\Clientes.cs" />
+    <Content Include="App_Code\Camadas\BLL\Tratamentos.cs" />
     <Compile Include="Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,9 +123,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Code\Camadas\BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
