@@ -6,19 +6,16 @@ using System.Web;
 
 namespace MasterPetSolut.App_Code.Camadas.DAL
 {
-    public class Clientes
+    public class Cidades
     {
         public string strCon = DAL.Conexao.getConexao();
-
-        public void Insert(MODEL.Clientes cliente)
+        public void Insert(MODEL.Cidades cidade)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Insert into Clientes values (@idCidade, @nome, @telefone, @celular, @endereco, @cpf, @email)";
+            string sql = "Insert into Cidades values (@nome, @uf)";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@idCidade", cliente.idCidade);
-            cmd.Parameters.AddWithValue("@nome", cliente.nome);
-            cmd.Parameters.AddWithValue("@nascimento", cliente.nascimento);
-            cmd.Parameters.AddWithValue("@endereco", cliente.endereco);
+            cmd.Parameters.AddWithValue("@nome", cidade.nome);
+            cmd.Parameters.AddWithValue("@uf", cidade.uf);
             conexao.Open();
             try
             {
@@ -26,7 +23,7 @@ namespace MasterPetSolut.App_Code.Camadas.DAL
             }
             catch
             {
-                Console.WriteLine("Deu erro na inserção de Clientes...");
+                Console.WriteLine("Deu erro na inserção de Cidades...");
             }
             finally
             {

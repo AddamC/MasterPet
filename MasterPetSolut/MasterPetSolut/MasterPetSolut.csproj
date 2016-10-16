@@ -96,6 +96,10 @@
     <Content Include="App_Code\Camadas\MODEL\Cidades.cs" />
     <Content Include="App_Code\Camadas\MODEL\Tipo_Tratamento.cs" />
     <Content Include="App_Code\Camadas\MODEL\Animais_Tratamento.cs" />
+    <Content Include="App_Code\Camadas\DAL\Conexao.cs" />
+    <Content Include="App_Code\Camadas\DAL\Cidades.cs" />
+    <Content Include="App_Code\Camadas\DAL\Animais.cs" />
+    <Content Include="App_Code\Camadas\DAL\Tratamentos.cs" />
     <Compile Include="Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
