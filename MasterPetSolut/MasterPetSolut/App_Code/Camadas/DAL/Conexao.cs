@@ -9,7 +9,7 @@ namespace MasterPetSolut.App_Code.Camadas.DAL
     {
         public static string getConexao()
         {
-            return @"Data Source=.\SQLEXPRESS;Initial Catalog=LOCADORA;Integrated Security=True";
+            return @"Data Source=.\SQLEXPRESS;Initial Catalog=PETSHOP;Integrated Security=True";
         }
     }
 }

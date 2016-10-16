@@ -2,27 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-        .auto-style17 {
-            width: 51%;
-        }
-        .auto-style21 {
-            width: 71px;
-        }
-        .auto-style23 {
-            width: 71px;
-            height: 23px;
-        }
-        .auto-style24 {
-            width: 68px;
-        }
-        .auto-style25 {
-            width: 68px;
-            height: 23px;
-        }
-        .auto-style26 {
-            width: 68px;
-            text-align: left;
-        }
         .auto-style27 {
             font-size: xx-large;
         }
@@ -41,72 +20,6 @@
     </p>
     <p class="auto-style16">
         &nbsp;</p>
-    <table align="center" class="auto-style17">
-        <tr>
-            <td class="auto-style26">&nbsp;
-                <asp:Label ID="Label1" runat="server" Text="ID:"></asp:Label>
-            </td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox1" runat="server">-1</asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style25">
-                <asp:Label ID="Label2" runat="server" Text="Nome:"></asp:Label>
-            </td>
-            <td class="auto-style23">
-                <asp:TextBox ID="TextBox2" runat="server" Width="203px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style24">
-                <asp:Label ID="Label3" runat="server" Text="Raça:"></asp:Label>
-            </td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox3" runat="server" Width="207px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style25">
-                <asp:Label ID="Label4" runat="server" Text="Espécie:"></asp:Label>
-            </td>
-            <td class="auto-style23">
-                <asp:TextBox ID="TextBox4" runat="server" Width="156px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style24">
-                <asp:Label ID="Label5" runat="server" Text="Cor:"></asp:Label>
-            </td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox5" runat="server" Width="115px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style25">
-                <asp:Label ID="Label6" runat="server" Text="Sexo:"></asp:Label>
-            </td>
-            <td class="auto-style23">
-                <asp:TextBox ID="TextBox6" runat="server" Width="52px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style25">
-                <asp:Label ID="Label7" runat="server" Text="Nascimento:"></asp:Label>
-            </td>
-            <td class="auto-style23">
-                <asp:TextBox ID="TextBox7" runat="server" Width="145px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style24">
-                <asp:Label ID="Label8" runat="server" Text="ID Cliente:"></asp:Label>
-            </td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox8" runat="server">-1</asp:TextBox>
-            </td>
-        </tr>
-    </table>
     <p class="auto-style16">
         <strong><em>
         <asp:Button ID="Button1" runat="server" CssClass="auto-style28" height="38px" OnClick="Button1_Click" Text="Inserir" width="85px" />
@@ -122,7 +35,55 @@
         <asp:Button ID="Button6" runat="server" CssClass="auto-style28" height="38px" Text="Voltar" width="85px" />
         </em></strong>
     </p>
+    <p class="auto-style16">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="id" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
+                <asp:BoundField DataField="raca" HeaderText="raca" SortExpression="raca" />
+                <asp:BoundField DataField="especie" HeaderText="especie" SortExpression="especie" />
+                <asp:BoundField DataField="cor" HeaderText="cor" SortExpression="cor" />
+                <asp:BoundField DataField="sexo" HeaderText="sexo" SortExpression="sexo" />
+                <asp:BoundField DataField="nascimento" HeaderText="nascimento" SortExpression="nascimento" />
+                <asp:BoundField DataField="idClientes" HeaderText="idClientes" SortExpression="idClientes" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            </Columns>
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#FFF1D4" />
+            <SortedAscendingHeaderStyle BackColor="#B95C30" />
+            <SortedDescendingCellStyle BackColor="#F1E5CE" />
+            <SortedDescendingHeaderStyle BackColor="#93451F" />
+        </asp:GridView>
+    </p>
     <p>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=BURACÃO\SQLEXPRESS;Initial Catalog=PETSHOP;Integrated Security=True" DeleteCommand="DELETE FROM [Animais] WHERE [id] = @id" InsertCommand="INSERT INTO [Animais] ([nome], [raca], [especie], [cor], [sexo], [nascimento], [idClientes]) VALUES (@nome, @raca, @especie, @cor, @sexo, @nascimento, @idClientes)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [id], [nome], [raca], [especie], [cor], [sexo], [nascimento], [idClientes] FROM [Animais]" UpdateCommand="UPDATE [Animais] SET [nome] = @nome, [raca] = @raca, [especie] = @especie, [cor] = @cor, [sexo] = @sexo, [nascimento] = @nascimento, [idClientes] = @idClientes WHERE [id] = @id">
+            <DeleteParameters>
+                <asp:Parameter Name="id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="nome" Type="String" />
+                <asp:Parameter Name="raca" Type="String" />
+                <asp:Parameter Name="especie" Type="String" />
+                <asp:Parameter Name="cor" Type="String" />
+                <asp:Parameter Name="sexo" Type="String" />
+                <asp:Parameter Name="nascimento" Type="DateTime" />
+                <asp:Parameter Name="idClientes" Type="Int32" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="nome" Type="String" />
+                <asp:Parameter Name="raca" Type="String" />
+                <asp:Parameter Name="especie" Type="String" />
+                <asp:Parameter Name="cor" Type="String" />
+                <asp:Parameter Name="sexo" Type="String" />
+                <asp:Parameter Name="nascimento" Type="DateTime" />
+                <asp:Parameter Name="idClientes" Type="Int32" />
+                <asp:Parameter Name="id" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
     </p>
     <p>
     </p>
