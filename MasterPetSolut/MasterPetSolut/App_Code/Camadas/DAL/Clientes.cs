@@ -8,6 +8,5 @@ namespace MasterPetSolut.App_Code.Camadas.DAL
     public class Clientes
     {
 
-        MODEL.Clientes
     }
 }
