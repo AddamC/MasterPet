@@ -6,30 +6,30 @@ using System.Web;
 
 namespace MasterPetSolut.App_Code.Camadas.DAL
 {
-    public class Tratamentos
+    public class Animais_Tratamento
     {
         public string strCon = Conexao.getConexao();
-        
-        public void Insert(MODEL.Tratamentos tratamentos)
+
+        public void Insert(MODEL.Animais_Tratamento animaisTratamento)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Insert into tratamentos values (@idTipo_tratamentos)";
+            string sql = "Insert into Animais_Tratamento values(@idTratamento, @idAnimais)";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@idTipo_tratamentos", tratamentos.idTipo_Tratamento);
+            cmd.Parameters.AddWithValue("@idTratamento", animaisTratamento.idTratamento);
+            cmd.Parameters.AddWithValue("@idAnimais", animaisTratamento.idAnimais);
             conexao.Open();
             try
             {
                 cmd.ExecuteNonQuery();
             }
-            catch
+            catch 
             {
-
-                Console.WriteLine("Deu Erro na inserção de tratamentos");
+                Console.WriteLine("Deu erro na inserção de Animais_Tratamento");
             }
             finally
             {
                 conexao.Close();
             }
-        } 
+        }
     }
 }
