@@ -81,6 +81,13 @@
             </td>
         </tr>
     </table>
+    <br />
+    <br />
+    <asp:GridView ID="GridView1" runat="server" Width="568px">
+    </asp:GridView>
+    <br />
+    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
+    <br />
     <p class="auto-style16">
         <strong><em>
         <asp:Button ID="Button1" runat="server" CssClass="auto-style28" height="38px" OnClick="Button1_Click" Text="Inserir" width="85px" />
@@ -89,7 +96,7 @@
         </em></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><em>
         <asp:Button ID="Button3" runat="server" CssClass="auto-style28" Height="38px" Text="Excluir" Width="85px" />
         </em></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><em>
-        <asp:Button ID="Button4" runat="server" CssClass="auto-style28" height="38px" Text="Gravar" width="85px" />
+        <asp:Button ID="Button4" runat="server" CssClass="auto-style28" height="38px" Text="Gravar" width="85px" OnClick="Button4_Click" />
         </em></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><em>
         <asp:Button ID="Button5" runat="server" CssClass="auto-style28" height="38px" Text="Cancelar" width="85px" />
         </em></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><em>

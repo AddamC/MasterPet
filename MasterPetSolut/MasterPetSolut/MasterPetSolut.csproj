@@ -100,6 +100,10 @@
     <Content Include="App_Code\Camadas\DAL\Cidades.cs" />
     <Content Include="App_Code\Camadas\DAL\Animais.cs" />
     <Content Include="App_Code\Camadas\DAL\Tratamentos.cs" />
+    <Content Include="App_Code\Camadas\BLL\Clientes.cs" />
+    <Content Include="App_Code\Camadas\BLL\Animais.cs" />
+    <Content Include="App_Code\Camadas\BLL\Cidades.cs" />
+    <Content Include="App_Code\Camadas\BLL\Tratamentos.cs" />
     <Compile Include="Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,9 +126,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Code\Camadas\BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
