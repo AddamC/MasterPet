@@ -3,7 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterPetSolut", "MasterPetSolut\MasterPetSolut.csproj", "{DD641081-7B9F-4EE5-AA13-6564C368D099}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MasterPet2", "..\..\MasterPet2\", "{9B696430-D75B-40EF-8852-90AF63BB64C5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61890"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\MasterPet2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61890\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61890"
+		Release.AspNetCompiler.PhysicalPath = "..\..\MasterPet2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61890\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61890"
+		SlnRelativePath = "..\..\MasterPet2\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +30,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD641081-7B9F-4EE5-AA13-6564C368D099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD641081-7B9F-4EE5-AA13-6564C368D099}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD641081-7B9F-4EE5-AA13-6564C368D099}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD641081-7B9F-4EE5-AA13-6564C368D099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B696430-D75B-40EF-8852-90AF63BB64C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B696430-D75B-40EF-8852-90AF63BB64C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B696430-D75B-40EF-8852-90AF63BB64C5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B696430-D75B-40EF-8852-90AF63BB64C5}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
