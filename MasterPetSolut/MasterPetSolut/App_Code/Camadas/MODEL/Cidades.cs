@@ -5,14 +5,10 @@ using System.Web;
 
 namespace MasterPetSolut.App_Code.Camadas.MODEL
 {
-    public class Clientes
+    public class Cidades
     {
         public int id { get; set; }
         public string nome { get; set; }
-        public DateTime aniversario { get; set; }
-        public string endereco { get; set; }
-        public int idCidade { get; set; }
-
-
+        public string uf { get; set; }
     }
 }
