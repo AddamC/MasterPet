@@ -47,7 +47,7 @@ namespace MasterPetSolut.App_Code.Camadas.DAL
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Insert into tratamentos values (@idTipo_tratamentos)";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@idTipo_tratamentos", tratamentos.idTipo_Tratamento);
+            cmd.Parameters.AddWithValue("@idTipo_tratamentos", tratamentos.idTipo_tratamento);
             conexao.Open();
             try
             {

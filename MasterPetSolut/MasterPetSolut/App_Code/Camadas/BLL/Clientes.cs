@@ -16,6 +16,23 @@ namespace MasterPetSolut.App_Code.Camadas.BLL
             dalCli.Insert(clientes);
         }
 
+        public List<MODEL.Clientes> Select()
+        {
+            DAL.Clientes dalCli = new DAL.Clientes();
+            return dalCli.Select();
+        }
+
+        public void Update(MODEL.Clientes clientes)
+        {
+            DAL.Clientes dalCli = new DAL.Clientes();
+            dalCli.Update(clientes);
+        }
+
+        public void Delete(MODEL.Clientes clientes)
+        {
+            DAL.Clientes dalCli = new DAL.Clientes();
+            dalCli.Delete(clientes);
+        }
 
 
     }

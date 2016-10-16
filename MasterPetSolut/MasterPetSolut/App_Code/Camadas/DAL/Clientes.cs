@@ -11,30 +11,38 @@ namespace MasterPetSolut.App_Code.Camadas.DAL
     {
         public string strCon = DAL.Conexao.getConexao();
 
+
         public List<MODEL.Clientes> Select()
         {
             List<MODEL.Clientes> lstClientes = new List<MODEL.Clientes>();
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Select * from Clientes";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            conexao.Open();
             try
             {
-                MODEL.Clientes clientes = new MODEL.Clientes();
-                clientes.nome = reader["nome"].ToString();
-                clientes.nascimento = Convert.ToDateTime(reader["nascimento"]);
-                clientes.endereco = reader["endereco"].ToString();
-                clientes.idCidade = Convert.ToInt32(reader["idCidade"]);
-                lstClientes.Add(clientes);
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.Clientes cliente = new MODEL.Clientes();
+                    cliente.id = Convert.ToInt32(reader["id"].ToString());
+                    cliente.nome = reader["nome"].ToString();
+                    cliente.endereco = reader["endereco"].ToString();
+                    cliente.nascimento = Convert.ToDateTime(reader["aniversario"].ToString());
+                    cliente.idCidade = Convert.ToInt32(reader["id"].ToString());
+                    lstClientes.Add(cliente);
+                }
             }
             catch
             {
-                Console.WriteLine("Deu erro na seleção de clientes");
+                Console.WriteLine("Erro na Seleção de Clientes");
             }
             finally
             {
                 conexao.Close();
             }
+
+
             return lstClientes;
         }
 

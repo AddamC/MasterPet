@@ -5,30 +5,12 @@
         .auto-style27 {
             font-size: xx-large;
         }
-        .auto-style17 {
-            width: 51%;
-        }
-        .auto-style26 {
-            width: 68px;
-            text-align: left;
-        }
-        .auto-style21 {
-            width: 71px;
-        }
-        .auto-style25 {
-            width: 68px;
-            height: 23px;
-        }
-        .auto-style23 {
-            width: 71px;
-            height: 23px;
-        }
-        .auto-style24 {
-            width: 68px;
-        }
         .auto-style28 {
             font-weight: bold;
             font-style: italic;
+        }
+        .auto-style29 {
+            text-align: left;
         }
     </style>
 </asp:Content>
@@ -39,54 +21,48 @@
 &nbsp;&nbsp;
         <asp:Label ID="Label9" runat="server" CssClass="auto-style27" Text="Clientes"></asp:Label>
     </p>
-    <p class="auto-style16">
-        &nbsp;</p>
-    <table align="center" class="auto-style17">
-        <tr>
-            <td class="auto-style26">&nbsp;
-                <asp:Label ID="Label1" runat="server" Text="ID:"></asp:Label>
-            </td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox1" runat="server">-1</asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style25">
-                <asp:Label ID="Label2" runat="server" Text="Nome:"></asp:Label>
-            </td>
-            <td class="auto-style23">
-                <asp:TextBox ID="TextBox2" runat="server" Width="203px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style24">
-                <asp:Label ID="Label3" runat="server" Text="Aniversário:"></asp:Label>
-            </td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox3" runat="server" Width="207px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style25">
-                <asp:Label ID="Label4" runat="server" Text="Endereço:"></asp:Label>
-            </td>
-            <td class="auto-style23">
-                <asp:TextBox ID="TextBox4" runat="server" Width="156px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style24">idCidade:</td>
-            <td class="auto-style21">
-                <asp:TextBox ID="TextBox5" runat="server" Width="115px">-1</asp:TextBox>
-            </td>
-        </tr>
-    </table>
+    <div class="auto-style29">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="id" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="ID" SortExpression="id" />
+                <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
+                <asp:BoundField DataField="nascimento" HeaderText="Nascimento" SortExpression="nascimento" />
+                <asp:BoundField DataField="endereco" HeaderText="Endereço" SortExpression="endereco" />
+                <asp:BoundField DataField="idCidade" HeaderText="idCidade" SortExpression="idCidade" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            </Columns>
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#FFF1D4" />
+            <SortedAscendingHeaderStyle BackColor="#B95C30" />
+            <SortedDescendingCellStyle BackColor="#F1E5CE" />
+            <SortedDescendingHeaderStyle BackColor="#93451F" />
+        </asp:GridView>
+    </div>
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=BURACÃO\SQLEXPRESS;Initial Catalog=PETSHOP;Integrated Security=True" DeleteCommand="DELETE FROM [Clientes] WHERE [id] = @id" InsertCommand="INSERT INTO [Clientes] ([nome], [nascimento], [endereco], [idCidade]) VALUES (@nome, @nascimento, @endereco, @idCidade)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [id], [nome], [nascimento], [endereco], [idCidade] FROM [Clientes]" UpdateCommand="UPDATE [Clientes] SET [nome] = @nome, [nascimento] = @nascimento, [endereco] = @endereco, [idCidade] = @idCidade WHERE [id] = @id">
+        <DeleteParameters>
+            <asp:Parameter Name="id" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="nome" Type="String" />
+            <asp:Parameter Name="nascimento" Type="DateTime" />
+            <asp:Parameter Name="endereco" Type="String" />
+            <asp:Parameter Name="idCidade" Type="Int32" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="nome" Type="String" />
+            <asp:Parameter Name="nascimento" Type="DateTime" />
+            <asp:Parameter Name="endereco" Type="String" />
+            <asp:Parameter Name="idCidade" Type="Int32" />
+            <asp:Parameter Name="id" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" Width="568px">
-    </asp:GridView>
-    <br />
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
     <br />
     <p class="auto-style16">
         <strong><em>

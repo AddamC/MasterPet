@@ -15,6 +15,25 @@ namespace MasterPetSolut.App_Code.Camadas.BLL
             dalAnim.Insert(animais);
         }
 
+        public List<MODEL.Animais> Select()
+        {
+            DAL.Animais dalAnim = new DAL.Animais();
+            return dalAnim.Select();
+        }
+
+
+        public void Update(MODEL.Animais animais)
+        {
+            DAL.Animais dalAnim = new DAL.Animais();
+            dalAnim.Update(animais);
+        }
+
+        public void Delete(MODEL.Animais animais)
+        {
+            DAL.Animais dalAnim = new DAL.Animais();
+            dalAnim.Delete(animais);
+        }
+
 
     }
 }
