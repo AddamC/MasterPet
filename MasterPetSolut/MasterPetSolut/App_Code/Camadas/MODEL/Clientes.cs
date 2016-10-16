@@ -5,9 +5,7 @@ using System.Web;
 
 namespace MasterPetSolut.App_Code.Camadas.MODEL
 {
-    public class Animais_Tratamento
+    public class Clientes
     {
-        public int idAnimais { get; set; }
-        public int idTratamento { get; set; }
     }
 }
