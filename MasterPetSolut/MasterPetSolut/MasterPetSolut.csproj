@@ -91,6 +91,7 @@
     </Compile>
     <Content Include="App_Code\Camadas\MODEL\Clientes.cs" />
     <Content Include="App_Code\Camadas\DAL\Clientes.cs" />
+    <Content Include="App_Code\Camadas\DAL\Conexao.cs" />
     <Compile Include="Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
