@@ -69,7 +69,6 @@
     <Content Include="Animais.aspx" />
     <Content Include="Cidade.aspx" />
     <Content Include="Cliente.aspx" />
-    <Content Include="Home.aspx" />
     <Content Include="logo.jpg" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.master" />
@@ -100,16 +99,14 @@
     <Content Include="App_Code\Camadas\DAL\Cidades.cs" />
     <Content Include="App_Code\Camadas\DAL\Animais.cs" />
     <Content Include="App_Code\Camadas\DAL\Tratamentos.cs" />
+    <Content Include="App_Code\Camadas\DAL\Tipo_Tratamentos.cs" />
+    <Content Include="App_Code\Camadas\DAL\Animais_Tratamento.cs" />
     <Compile Include="Cidade.aspx.cs">
       <DependentUpon>Cidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Cliente.aspx.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPage.master.cs">

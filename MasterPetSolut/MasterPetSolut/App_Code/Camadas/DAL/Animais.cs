@@ -10,6 +10,35 @@ namespace MasterPetSolut.App_Code.Camadas.DAL
     {
         public string strCon = Conexao.getConexao();
 
+        public List<MODEL.Animais> Select()
+        {
+            List<MODEL.Animais> lstAnimais = new List<MODEL.Animais>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Animais";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.Animais animais = new MODEL.Animais();
+                    animais.id = Convert.ToInt32(reader["id"]);
+                    animais.nome = reader["nome"].ToString();
+                    animais.raca = reader["raca"].ToString();
+                    animais.especie = reader[""]
+                    lstCidade.Add(cidade);
+                }
+            }
+            catch
+            {
+
+                throw;
+            }
+
+            return lstAnimais;
+        }
+
         public void Insert(MODEL.Animais animais)
         {
             SqlConnection conexao = new SqlConnection(strCon);
